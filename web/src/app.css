@@ -1,0 +1,32 @@
+/* ── The Editorial · Ink — global design tokens (ported from the design reference).
+   The whole aesthetic lives in these ~10 tokens + 3 typefaces; a dark variant is a one-block
+   :root override. Component styling stays scoped inside each .svelte; only the genuinely-global
+   layer (tokens, fonts, paper) lives here. ── */
+:root {
+	--paper: #fbf8f2;
+	--panel: #ffffff;
+	--panel2: #f5f0e7;
+	--ink: #20242b;
+	--muted: #6b7280;
+	--muted2: #9aa0a8;
+	--line: #e7e0d4;
+	--accent: #241a12;
+	--accepted: #c8a24a;
+	--serif: 'Newsreader', Georgia, 'Times New Roman', serif;
+	--display: 'Fraunces', Georgia, serif;
+	--mono: 'IBM Plex Mono', ui-monospace, Menlo, monospace;
+}
+
+html,
+body {
+	margin: 0;
+	height: 100%;
+	overflow: hidden;
+	background: var(--paper);
+	/* faint letterpress grain so the field never reads as flat white */
+	background-image: radial-gradient(rgba(120, 100, 70, 0.06) 1px, transparent 1px);
+	background-size: 5px 5px;
+	font-family: var(--serif);
+	color: var(--ink);
+	-webkit-font-smoothing: antialiased;
+}
