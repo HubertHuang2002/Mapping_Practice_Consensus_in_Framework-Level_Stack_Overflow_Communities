@@ -1,0 +1,25 @@
+{
+  "_note": "name_clusters (LLM gpt-5.4, 2026-06-03) re-labelled the two co-association clusters that collided on 'Direct set vs merge/immutability' (d2_consensus run-0 naming artifact). Members unchanged; only name+description.",
+  "renames": [
+    {
+      "members": [
+        1,
+        50,
+        56,
+        89,
+        122,
+        124
+      ],
+      "name": "Set state from new value",
+      "description": "These practices say to pass the actual new value into the state setter when the update does not depend on previous state. They contrast this with building the next state from stale captured state or an unnecessary alternative setter."
+    },
+    {
+      "members": [
+        147,
+        155
+      ],
+      "name": "Copy data before setting state",
+      "description": "These practices emphasize making a new copied value, such as via deep copy or spread, before calling the setter. Their common point is giving state a fresh reference from the updated data."
+    }
+  ]
+}

@@ -1,0 +1,2446 @@
+[
+  {
+    "answer_id": 54069332,
+    "question_id": 54069253,
+    "source": "canonical",
+    "score": 985,
+    "is_accepted": 1,
+    "body_len": 1734,
+    "practices": [
+      {
+        "practice": "Use a useEffect with the state in its dependency array to perform an action when that state updates.",
+        "conditions": [],
+        "evidence_type": "both"
+      },
+      {
+        "practice": "Set state directly with the new value, e.g. setMovies(result), to replace the previous state value.",
+        "conditions": [],
+        "evidence_type": "both"
+      },
+      {
+        "practice": "Use the functional updater form with spread syntax to merge new results into the previous array state, e.g. setMovies(prevMovies => [...prevMovies, ...result]).",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 58877875,
+    "question_id": 54069253,
+    "source": "canonical",
+    "score": 544,
+    "is_accepted": 0,
+    "body_len": 2652,
+    "practices": [
+      {
+        "practice": "Read the value in the render function instead of inside nested functions when you need the updated state.",
+        "conditions": [],
+        "evidence_type": "both"
+      },
+      {
+        "practice": "Put the state variable in a useEffect dependency list and log or react to it in a separate effect.",
+        "conditions": [
+          "use the react-hooks/exhaustive-deps eslint rule"
+        ],
+        "evidence_type": "both"
+      },
+      {
+        "practice": "Compute a temporary local variable and use that value immediately instead of reading state back.",
+        "conditions": [],
+        "evidence_type": "both"
+      },
+      {
+        "practice": "Use a mutable ref to remember the latest value when you do not need a re-render.",
+        "conditions": [
+          "only if you do not need state",
+          "only if you only want to remember the value"
+        ],
+        "evidence_type": "both"
+      },
+      {
+        "practice": "Treat state and props as immutable within a render and expect closures to keep the render's constant value.",
+        "conditions": [],
+        "evidence_type": "both"
+      },
+      {
+        "practice": "Use the functional updater form inside the handler or async callback when updating from the current value.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 65436417,
+    "question_id": 54069253,
+    "source": "canonical",
+    "score": 32,
+    "is_accepted": 0,
+    "body_len": 1006,
+    "practices": [
+      {
+        "practice": "Use the react-useStateRef / react-usestateref hook instead of React.useState so you can access the latest state through a ref while still rendering from state.",
+        "conditions": [
+          "backward compatible with React.useState"
+        ],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 75844926,
+    "question_id": 54069253,
+    "source": "canonical",
+    "score": 20,
+    "is_accepted": 0,
+    "body_len": 3753,
+    "practices": [
+      {
+        "practice": "Use the locally computed new value directly in your logic instead of reading the state back immediately after calling the setter.",
+        "conditions": [],
+        "evidence_type": "both"
+      },
+      {
+        "practice": "Trigger a useEffect from the updated state by listing that state in the dependency array, and run the follow-up logic there.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 72697737,
+    "question_id": 54069253,
+    "source": "canonical",
+    "score": 16,
+    "is_accepted": 0,
+    "body_len": 670,
+    "practices": [
+      {
+        "practice": "Read the updated state on the next render instead of immediately after calling the setter.",
+        "conditions": [],
+        "evidence_type": "prose"
+      }
+    ]
+  },
+  {
+    "answer_id": 63504457,
+    "question_id": 54069253,
+    "source": "canonical",
+    "score": 15,
+    "is_accepted": 0,
+    "body_len": 633,
+    "practices": [
+      {
+        "practice": "Use useEffect with an empty dependency array to set state after the component mounts.",
+        "conditions": [
+          "leave the dependency array blank"
+        ],
+        "evidence_type": "both"
+      },
+      {
+        "practice": "Use React.useRef() for an instant mutable value instead of waiting for state to update.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 62413849,
+    "question_id": 54069253,
+    "source": "canonical",
+    "score": 13,
+    "is_accepted": 0,
+    "body_len": 3236,
+    "practices": [
+      {
+        "practice": "Rewrite the state management around useReducer instead of relying on useState setters for this shared application state.",
+        "conditions": [],
+        "evidence_type": "both"
+      },
+      {
+        "practice": "Expose the reducer state and dispatch through React context so pages can read and update the shared state everywhere.",
+        "conditions": [],
+        "evidence_type": "both"
+      },
+      {
+        "practice": "Create custom hooks that return a state slice together with a setter-like dispatch wrapper for that slice.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 68311173,
+    "question_id": 54069253,
+    "source": "canonical",
+    "score": 12,
+    "is_accepted": 0,
+    "body_len": 1419,
+    "practices": []
+  },
+  {
+    "answer_id": 66797722,
+    "question_id": 54069253,
+    "source": "canonical",
+    "score": 5,
+    "is_accepted": 0,
+    "body_len": 601,
+    "practices": [
+      {
+        "practice": "Initialize the state variable with a default value in the destructuring pattern, using `const [state = initialValue, setState] = useState()` instead of passing the initial value to `useState(initialValue)`.",
+        "conditions": [],
+        "evidence_type": "both"
+      },
+      {
+        "practice": "Use `useState` with `useEffect` when you are concerned about using old state for a use case that needs that state.",
+        "conditions": [
+          "when concerned with using old state for any use case"
+        ],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 68960240,
+    "question_id": 54069253,
+    "source": "canonical",
+    "score": 3,
+    "is_accepted": 0,
+    "body_len": 586,
+    "practices": [
+      {
+        "practice": "Use the push method to update state when you only need to update state.",
+        "conditions": [],
+        "evidence_type": "both"
+      },
+      {
+        "practice": "Use a reload state value together with a useEffect that triggers downloadUrl1 when reload equals 4.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 78093905,
+    "question_id": 54069253,
+    "source": "canonical",
+    "score": 2,
+    "is_accepted": 0,
+    "body_len": 798,
+    "practices": [
+      {
+        "practice": "Run action on update of movies inside a useEffect that depends on [movies].",
+        "conditions": [],
+        "evidence_type": "both"
+      },
+      {
+        "practice": "Make the effect callback async and pass the current movies value into a separate function called from onClick as onClick={() => myfunction(movies)}.",
+        "conditions": [
+          "in the answer's async wrapper variant"
+        ],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 78123008,
+    "question_id": 54069253,
+    "source": "canonical",
+    "score": 2,
+    "is_accepted": 0,
+    "body_len": 243,
+    "practices": [
+      {
+        "practice": "Access the previous state and set a new updated value by using the functional updater form, such as appending `result` to the prior array with `setState(prev => [...prev, ...result])`.",
+        "conditions": [
+          "when the state is an array"
+        ],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 67658803,
+    "question_id": 54069253,
+    "source": "canonical",
+    "score": 1,
+    "is_accepted": 0,
+    "body_len": 2225,
+    "practices": [
+      {
+        "practice": "Use a custom hook like useAsyncWatcher to wait for state values to update and return the new value, optionally including the previous value.",
+        "conditions": [
+          "promise wrapper around useEffect"
+        ],
+        "evidence_type": "both"
+      },
+      {
+        "practice": "Use a deep state hook like useAsyncDeepState whose setter can return a promise synchronized with the internal effect.",
+        "conditions": [
+          "setter can be called with no arguments to subscribe to state updates"
+        ],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 68216455,
+    "question_id": 54069253,
+    "source": "canonical",
+    "score": 1,
+    "is_accepted": 0,
+    "body_len": 270,
+    "practices": [
+      {
+        "practice": "Capture the current state inside the functional updater callback instead of trying to read the setter result.",
+        "conditions": [],
+        "evidence_type": "code"
+      },
+      {
+        "practice": "Run the alert inside a useEffect after the state update logic.",
+        "conditions": [],
+        "evidence_type": "code"
+      }
+    ]
+  },
+  {
+    "answer_id": 70850040,
+    "question_id": 54069253,
+    "source": "canonical",
+    "score": 1,
+    "is_accepted": 0,
+    "body_len": 470,
+    "practices": [
+      {
+        "practice": "Compute a new object locally with the updated field (for example, let myDataNew = {...myData, content: x}) instead of reading state back immediately.",
+        "conditions": [],
+        "evidence_type": "code"
+      }
+    ]
+  },
+  {
+    "answer_id": 77007163,
+    "question_id": 54069253,
+    "source": "canonical",
+    "score": 1,
+    "is_accepted": 0,
+    "body_len": 645,
+    "practices": [
+      {
+        "practice": "Create a custom hook that lets you pass a callback to the state setter so actions run after the state update completes.",
+        "conditions": [
+          "functional components"
+        ],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 77355623,
+    "question_id": 54069253,
+    "source": "canonical",
+    "score": 1,
+    "is_accepted": 0,
+    "body_len": 882,
+    "practices": []
+  },
+  {
+    "answer_id": 78054146,
+    "question_id": 54069253,
+    "source": "canonical",
+    "score": 1,
+    "is_accepted": 0,
+    "body_len": 339,
+    "practices": [
+      {
+        "practice": "Use a useEffect hook with the state variable in its dependency array so the callback runs after the state changes.",
+        "conditions": [],
+        "evidence_type": "prose"
+      }
+    ]
+  },
+  {
+    "answer_id": 70405577,
+    "question_id": 54069253,
+    "source": "canonical",
+    "score": -1,
+    "is_accepted": 0,
+    "body_len": 994,
+    "practices": [
+      {
+        "practice": "Wrap the state setter in a Promise that resolves from the setter callback so you can await the new state value.",
+        "conditions": [],
+        "evidence_type": "both"
+      },
+      {
+        "practice": "Use the awaited value returned by that wrapper to update another piece of state after the setter runs.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 79729529,
+    "question_id": 54069253,
+    "source": "canonical",
+    "score": -1,
+    "is_accepted": 0,
+    "body_len": 222,
+    "practices": [
+      {
+        "practice": "Use useRef instead of state when you want to read and write a value immediately through .current.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 61863883,
+    "question_id": 54069253,
+    "source": "canonical",
+    "score": -2,
+    "is_accepted": 0,
+    "body_len": 360,
+    "practices": [
+      {
+        "practice": "Render the state value with JSON.stringify(movies) instead of returning the previous placeholder value.",
+        "conditions": [],
+        "evidence_type": "both"
+      },
+      {
+        "practice": "Move console.log(movies) outside useEffect and place it right above the return so it runs in the render body and sees the updated state on the next render.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 75222714,
+    "question_id": 75222677,
+    "source": "dup",
+    "score": 4,
+    "is_accepted": 0,
+    "body_len": 127,
+    "practices": [
+      {
+        "practice": "Create the entire array first and then set the state at the end of the loop.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 74996705,
+    "question_id": 74996640,
+    "source": "dup",
+    "score": 3,
+    "is_accepted": 0,
+    "body_len": 254,
+    "practices": [
+      {
+        "practice": "See the new value on the next render instead of inside the event handler.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 75532130,
+    "question_id": 75531897,
+    "source": "dup",
+    "score": 3,
+    "is_accepted": 1,
+    "body_len": 373,
+    "practices": [
+      {
+        "practice": "Add a useEffect hook so you can observe the value once it has been updated even though the setter is asynchronous.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 77520031,
+    "question_id": 77519965,
+    "source": "dup",
+    "score": 3,
+    "is_accepted": 0,
+    "body_len": 537,
+    "practices": [
+      {
+        "practice": "Do not read the just-set state value and use the value you already have from your JSON instead.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 79074049,
+    "question_id": 79073981,
+    "source": "dup",
+    "score": 3,
+    "is_accepted": 1,
+    "body_len": 96,
+    "practices": []
+  },
+  {
+    "answer_id": 75444831,
+    "question_id": 75444757,
+    "source": "dup",
+    "score": 2,
+    "is_accepted": 0,
+    "body_len": 124,
+    "practices": [
+      {
+        "practice": "Subscribe to the state variable using useEffect if you want to get new values of it.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 76222362,
+    "question_id": 76222312,
+    "source": "dup",
+    "score": 2,
+    "is_accepted": 1,
+    "body_len": 649,
+    "practices": []
+  },
+  {
+    "answer_id": 76462884,
+    "question_id": 76462800,
+    "source": "dup",
+    "score": 2,
+    "is_accepted": 1,
+    "body_len": 78,
+    "practices": []
+  },
+  {
+    "answer_id": 76690669,
+    "question_id": 76690624,
+    "source": "dup",
+    "score": 2,
+    "is_accepted": 1,
+    "body_len": 699,
+    "practices": [
+      {
+        "practice": "Use a useEffect hook with squares in its dependency list so checkWinner runs after squares changes.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 78110717,
+    "question_id": 78110624,
+    "source": "dup",
+    "score": 2,
+    "is_accepted": 1,
+    "body_len": 248,
+    "practices": [
+      {
+        "practice": "Use useEffect to respond to changes in state.",
+        "conditions": [],
+        "evidence_type": "both"
+      },
+      {
+        "practice": "Use another effect to respond to those changes.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 78111410,
+    "question_id": 78110624,
+    "source": "dup",
+    "score": 2,
+    "is_accepted": 0,
+    "body_len": 546,
+    "practices": [
+      {
+        "practice": "Use useEffect to handle the updated state instead of relying on the setter to update immediately.",
+        "conditions": [],
+        "evidence_type": "prose"
+      }
+    ]
+  },
+  {
+    "answer_id": 78712264,
+    "question_id": 78711891,
+    "source": "dup",
+    "score": 2,
+    "is_accepted": 0,
+    "body_len": 233,
+    "practices": [
+      {
+        "practice": "Remove the useEffect and fetch the new value from the API on the rerender after setting inputsData to false on the button click.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 74996715,
+    "question_id": 74996640,
+    "source": "dup",
+    "score": 1,
+    "is_accepted": 0,
+    "body_len": 211,
+    "practices": [
+      {
+        "practice": "Use a callback function as the state updater so the value updates accordingly.",
+        "conditions": [],
+        "evidence_type": "both"
+      },
+      {
+        "practice": "Use a hook in a functional component so the component renders whenever the state changes.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 75031044,
+    "question_id": 75030746,
+    "source": "dup",
+    "score": 1,
+    "is_accepted": 0,
+    "body_len": 558,
+    "practices": [
+      {
+        "practice": "Pass a callback function to the setter when you need to use the old value.",
+        "conditions": [
+          "only when the new value depends on the old value"
+        ],
+        "evidence_type": "prose"
+      },
+      {
+        "practice": "Set a definite value directly when it does not depend on the old value.",
+        "conditions": [
+          "only when the new value does not depend on the old value"
+        ],
+        "evidence_type": "prose"
+      },
+      {
+        "practice": "Read the value on the next render, such as in the body of the component before the JSX return.",
+        "conditions": [],
+        "evidence_type": "prose"
+      }
+    ]
+  },
+  {
+    "answer_id": 75088901,
+    "question_id": 75088729,
+    "source": "dup",
+    "score": 1,
+    "is_accepted": 1,
+    "body_len": 750,
+    "practices": [
+      {
+        "practice": "Run the checks on the locally computed value when you write it to state instead of checking the stale instance afterward.",
+        "conditions": [],
+        "evidence_type": "both"
+      },
+      {
+        "practice": "Move the checks into a useEffect that depends on the state constant so they run after the state changes.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 75131695,
+    "question_id": 75131644,
+    "source": "dup",
+    "score": 1,
+    "is_accepted": 1,
+    "body_len": 591,
+    "practices": []
+  },
+  {
+    "answer_id": 75342427,
+    "question_id": 75342404,
+    "source": "dup",
+    "score": 1,
+    "is_accepted": 0,
+    "body_len": 311,
+    "practices": [
+      {
+        "practice": "Add another useEffect that listens for changes in the product state and sets isLoading to false after product has finished setting.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 75512277,
+    "question_id": 75512170,
+    "source": "dup",
+    "score": 1,
+    "is_accepted": 0,
+    "body_len": 751,
+    "practices": [
+      {
+        "practice": "Use the updated value from the newly created function after React re-renders instead of relying on the old value captured in the current function.",
+        "conditions": [],
+        "evidence_type": "both"
+      },
+      {
+        "practice": "Set the array state from the newly created array rather than from the old value captured in the current function.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 75848775,
+    "question_id": 75848696,
+    "source": "dup",
+    "score": 1,
+    "is_accepted": 0,
+    "body_len": 338,
+    "practices": [
+      {
+        "practice": "Use useEffect to log or otherwise act on the value after it has changed.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 76391015,
+    "question_id": 76390964,
+    "source": "dup",
+    "score": 1,
+    "is_accepted": 1,
+    "body_len": 6,
+    "practices": []
+  },
+  {
+    "answer_id": 76391518,
+    "question_id": 76390964,
+    "source": "dup",
+    "score": 1,
+    "is_accepted": 0,
+    "body_len": 192,
+    "practices": [
+      {
+        "practice": "Initialize the relevant state values to an empty string or empty array instead of leaving them undefined.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 76598617,
+    "question_id": 76596774,
+    "source": "dup",
+    "score": 1,
+    "is_accepted": 1,
+    "body_len": 245,
+    "practices": [
+      {
+        "practice": "Use useRef instead of state if the quotes array is not shown in the UI and only needs to persist between renderings.",
+        "conditions": [
+          "if the quotes array is not presented in the UI"
+        ],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 76726082,
+    "question_id": 76726065,
+    "source": "dup",
+    "score": 1,
+    "is_accepted": 1,
+    "body_len": 339,
+    "practices": [
+      {
+        "practice": "Get the new value after the next render inside an effect.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 76828243,
+    "question_id": 76828155,
+    "source": "dup",
+    "score": 1,
+    "is_accepted": 1,
+    "body_len": 350,
+    "practices": [
+      {
+        "practice": "Use useEffect to trigger the follow-up logic after the state has been updated.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 76950268,
+    "question_id": 76950232,
+    "source": "dup",
+    "score": 1,
+    "is_accepted": 0,
+    "body_len": 187,
+    "practices": []
+  },
+  {
+    "answer_id": 76950271,
+    "question_id": 76950232,
+    "source": "dup",
+    "score": 1,
+    "is_accepted": 0,
+    "body_len": 487,
+    "practices": [
+      {
+        "practice": "Store the returned value from the prompt in a local variable and use that instead of trying to read the state immediately after calling the setter.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 76998916,
+    "question_id": 76998888,
+    "source": "dup",
+    "score": 1,
+    "is_accepted": 0,
+    "body_len": 127,
+    "practices": []
+  },
+  {
+    "answer_id": 77493673,
+    "question_id": 77493194,
+    "source": "dup",
+    "score": 1,
+    "is_accepted": 0,
+    "body_len": 800,
+    "practices": [
+      {
+        "practice": "Use a useEffect hook to verify or observe the state after it has changed.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 77520036,
+    "question_id": 77519965,
+    "source": "dup",
+    "score": 1,
+    "is_accepted": 1,
+    "body_len": 42,
+    "practices": []
+  },
+  {
+    "answer_id": 77630847,
+    "question_id": 77630358,
+    "source": "dup",
+    "score": 1,
+    "is_accepted": 0,
+    "body_len": 473,
+    "practices": [
+      {
+        "practice": "Remove the locally defined state variable and use the prop state directly instead of keeping two separate state variables.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 77654476,
+    "question_id": 77654388,
+    "source": "dup",
+    "score": 1,
+    "is_accepted": 1,
+    "body_len": 142,
+    "practices": []
+  },
+  {
+    "answer_id": 77732138,
+    "question_id": 77731170,
+    "source": "dup",
+    "score": 1,
+    "is_accepted": 0,
+    "body_len": 312,
+    "practices": [
+      {
+        "practice": "Filter the array before setting it, instead of cloning it and then filtering and setting it.",
+        "conditions": [],
+        "evidence_type": "both"
+      },
+      {
+        "practice": "Extract the filtering logic to a function and do the entire filtering in a single step.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 78072731,
+    "question_id": 78072677,
+    "source": "dup",
+    "score": 1,
+    "is_accepted": 0,
+    "body_len": 135,
+    "practices": []
+  },
+  {
+    "answer_id": 78110732,
+    "question_id": 78110624,
+    "source": "dup",
+    "score": 1,
+    "is_accepted": 0,
+    "body_len": 330,
+    "practices": [
+      {
+        "practice": "Use a useEffect hook to listen to the state change instead of validating the value immediately after setting it.",
+        "conditions": [],
+        "evidence_type": "both"
+      },
+      {
+        "practice": "Do not use the found state if it is unnecessary; use the description state directly instead.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 78110909,
+    "question_id": 78110624,
+    "source": "dup",
+    "score": 1,
+    "is_accepted": 0,
+    "body_len": 1008,
+    "practices": [
+      {
+        "practice": "Compute the derived values on each render instead of keeping them in their own state.",
+        "conditions": [],
+        "evidence_type": "both"
+      },
+      {
+        "practice": "Use useMemo to avoid unnecessary recalculations when the computation is resource heavy or the component may render for unrelated changes.",
+        "conditions": [
+          "if the computation is resource heavy",
+          "if the component might render because of unrelated changes"
+        ],
+        "evidence_type": "both"
+      },
+      {
+        "practice": "Memoize the component to avoid unnecessary calculations.",
+        "conditions": [
+          "if the computation is resource heavy",
+          "if the component might render because of unrelated changes"
+        ],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 78235672,
+    "question_id": 78235632,
+    "source": "dup",
+    "score": 1,
+    "is_accepted": 0,
+    "body_len": 274,
+    "practices": []
+  },
+  {
+    "answer_id": 78263264,
+    "question_id": 78263221,
+    "source": "dup",
+    "score": 1,
+    "is_accepted": 1,
+    "body_len": 220,
+    "practices": []
+  },
+  {
+    "answer_id": 78586081,
+    "question_id": 78585527,
+    "source": "dup",
+    "score": 1,
+    "is_accepted": 0,
+    "body_len": 1504,
+    "practices": [
+      {
+        "practice": "Use the state in handlers and effects rather than expecting the setter to make it available immediately in the same render.",
+        "conditions": [],
+        "evidence_type": "both"
+      },
+      {
+        "practice": "Use updater functions when you need to create new state from previous state or when accessing the state variable itself is inconvenient.",
+        "conditions": [
+          "for multiple updates within the same event",
+          "when accessing the state variable itself is inconvenient"
+        ],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 78592854,
+    "question_id": 78592601,
+    "source": "dup",
+    "score": 1,
+    "is_accepted": 1,
+    "body_len": 2657,
+    "practices": []
+  },
+  {
+    "answer_id": 78620196,
+    "question_id": 78620146,
+    "source": "dup",
+    "score": 1,
+    "is_accepted": 0,
+    "body_len": 211,
+    "practices": []
+  },
+  {
+    "answer_id": 78651629,
+    "question_id": 78651409,
+    "source": "dup",
+    "score": 1,
+    "is_accepted": 1,
+    "body_len": 576,
+    "practices": [
+      {
+        "practice": "Use the functional update form of the useState setter when setting the same state variable multiple times so later updates do not overwrite earlier ones with stale values.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 78784567,
+    "question_id": 78784444,
+    "source": "dup",
+    "score": 1,
+    "is_accepted": 1,
+    "body_len": 515,
+    "practices": []
+  },
+  {
+    "answer_id": 78873102,
+    "question_id": 78873089,
+    "source": "dup",
+    "score": 1,
+    "is_accepted": 1,
+    "body_len": 1207,
+    "practices": [
+      {
+        "practice": "Use the functional updater form when pushing to a useState array so each update receives the previous array state.",
+        "conditions": [],
+        "evidence_type": "prose"
+      }
+    ]
+  },
+  {
+    "answer_id": 78873104,
+    "question_id": 78873089,
+    "source": "dup",
+    "score": 1,
+    "is_accepted": 0,
+    "body_len": 413,
+    "practices": [
+      {
+        "practice": "Use the functional form of setState so each update to the array considers the current state at the time of the update.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 74989092,
+    "question_id": 74989069,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 0,
+    "body_len": 112,
+    "practices": []
+  },
+  {
+    "answer_id": 74989184,
+    "question_id": 74989069,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 0,
+    "body_len": 366,
+    "practices": []
+  },
+  {
+    "answer_id": 74989427,
+    "question_id": 74989069,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 0,
+    "body_len": 177,
+    "practices": []
+  },
+  {
+    "answer_id": 75044305,
+    "question_id": 75044239,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 1,
+    "body_len": 255,
+    "practices": []
+  },
+  {
+    "answer_id": 75045296,
+    "question_id": 75045264,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 0,
+    "body_len": 269,
+    "practices": []
+  },
+  {
+    "answer_id": 75045313,
+    "question_id": 75045264,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 0,
+    "body_len": 143,
+    "practices": [
+      {
+        "practice": "Use the useEffect hook to run code after the state update has been applied.",
+        "conditions": [],
+        "evidence_type": "prose"
+      }
+    ]
+  },
+  {
+    "answer_id": 75072889,
+    "question_id": 75072831,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 1,
+    "body_len": 491,
+    "practices": [
+      {
+        "practice": "Store the input value in state as the user changes it so the value is already available when submitting.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 75073014,
+    "question_id": 75072831,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 0,
+    "body_len": 477,
+    "practices": [
+      {
+        "practice": "Add a callback to the state change and execute the API in that callback after the state has been changed.",
+        "conditions": [],
+        "evidence_type": "prose"
+      },
+      {
+        "practice": "Use the useCallback() hook with the state in its dependency array so the function executes on every state change.",
+        "conditions": [],
+        "evidence_type": "prose"
+      }
+    ]
+  },
+  {
+    "answer_id": 75088957,
+    "question_id": 75088729,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 0,
+    "body_len": 114,
+    "practices": [
+      {
+        "practice": "Store the chess.js instance in a ref instead of creating a new one every time you want to make a move.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 75088967,
+    "question_id": 75088729,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 0,
+    "body_len": 308,
+    "practices": [
+      {
+        "practice": "Inline the makeAMove logic and use the updated game value for the rest of the event handler instead of reading state back immediately.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 75147830,
+    "question_id": 75147592,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 1,
+    "body_len": 151,
+    "practices": [
+      {
+        "practice": "Store the urls in a local array instead of relying on the useState value in the same render cycle.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 75155917,
+    "question_id": 75155855,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 0,
+    "body_len": 202,
+    "practices": [
+      {
+        "practice": "Store the value in a temporary variable instead of reading state back immediately after calling the setter.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 75155926,
+    "question_id": 75155855,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 0,
+    "body_len": 294,
+    "practices": [
+      {
+        "practice": "Put the logging or check in a useEffect that re-runs when the state changes so you can see the updated value.",
+        "conditions": [
+          "without a dependency array"
+        ],
+        "evidence_type": "both"
+      },
+      {
+        "practice": "Use the change in randomNoteId to console.log the value and verify whether it really changed.",
+        "conditions": [
+          "for testing purpose"
+        ],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 75222723,
+    "question_id": 75222677,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 0,
+    "body_len": 224,
+    "practices": [
+      {
+        "practice": "Cache a new output in the function and call the hook at the end instead of calling setOptions inside the loop.",
+        "conditions": [],
+        "evidence_type": "prose"
+      }
+    ]
+  },
+  {
+    "answer_id": 75256763,
+    "question_id": 75256605,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 0,
+    "body_len": 370,
+    "practices": []
+  },
+  {
+    "answer_id": 75342624,
+    "question_id": 75342404,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 0,
+    "body_len": 363,
+    "practices": []
+  },
+  {
+    "answer_id": 75547512,
+    "question_id": 75547433,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 0,
+    "body_len": 413,
+    "practices": [
+      {
+        "practice": "Create a useEffect that depends on the state so you can log or run code after the state updates.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 75728557,
+    "question_id": 75728425,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 0,
+    "body_len": 204,
+    "practices": [
+      {
+        "practice": "Replace the state value directly instead of spreading the old prevData object.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 75777164,
+    "question_id": 75776917,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 0,
+    "body_len": 418,
+    "practices": [
+      {
+        "practice": "Use useRef when you need unbound state to be reflected without waiting for a re-render.",
+        "conditions": [
+          "for unbound state",
+          "without re-render"
+        ],
+        "evidence_type": "prose"
+      }
+    ]
+  },
+  {
+    "answer_id": 76032929,
+    "question_id": 76029592,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 0,
+    "body_len": 191,
+    "practices": []
+  },
+  {
+    "answer_id": 76041000,
+    "question_id": 76040963,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 0,
+    "body_len": 92,
+    "practices": []
+  },
+  {
+    "answer_id": 76237264,
+    "question_id": 76237132,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 0,
+    "body_len": 195,
+    "practices": [
+      {
+        "practice": "Add a useEffect to run logic after the state has been updated.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 76365779,
+    "question_id": 76365686,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 0,
+    "body_len": 96,
+    "practices": []
+  },
+  {
+    "answer_id": 76462832,
+    "question_id": 76462800,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 0,
+    "body_len": 279,
+    "practices": [
+      {
+        "practice": "Use the selected value from the event directly instead of reading state back immediately after calling the setter.",
+        "conditions": [],
+        "evidence_type": "prose"
+      },
+      {
+        "practice": "Log event.target.value to verify the current selection instead of logging the state variable right after setState.",
+        "conditions": [],
+        "evidence_type": "prose"
+      }
+    ]
+  },
+  {
+    "answer_id": 76544358,
+    "question_id": 76543820,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 1,
+    "body_len": 402,
+    "practices": [
+      {
+        "practice": "Use useEffect to access data that was recently updated after the state change has taken effect.",
+        "conditions": [],
+        "evidence_type": "prose"
+      },
+      {
+        "practice": "If you need the value immediately after calling the setter, use the same value you are passing to setCompanies or setServices instead of reading state back.",
+        "conditions": [],
+        "evidence_type": "prose"
+      },
+      {
+        "practice": "Do not await setState because setState does not return a promise.",
+        "conditions": [],
+        "evidence_type": "prose"
+      }
+    ]
+  },
+  {
+    "answer_id": 76596800,
+    "question_id": 76596774,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 0,
+    "body_len": 726,
+    "practices": [
+      {
+        "practice": "Avoid keeping a separate \"quotes\" state variable if you can set the randomQuote value directly inside fetchData and display that value on the frontend.",
+        "conditions": [],
+        "evidence_type": "both"
+      },
+      {
+        "practice": "Put the state variable in the useEffect dependency array if you need to do something with it after updating it.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 76665918,
+    "question_id": 76665849,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 1,
+    "body_len": 128,
+    "practices": []
+  },
+  {
+    "answer_id": 76726076,
+    "question_id": 76726065,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 0,
+    "body_len": 308,
+    "practices": [
+      {
+        "practice": "Use the previous state in the setTodos function.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 76734827,
+    "question_id": 76734763,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 0,
+    "body_len": 403,
+    "practices": [
+      {
+        "practice": "Pass the data directly from the React Hook Form values into the handleLogin request instead of relying on the user state.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 76767772,
+    "question_id": 76767716,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 0,
+    "body_len": 589,
+    "practices": [
+      {
+        "practice": "Use a useEffect to log or otherwise access the latest state value after it has updated.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 77107999,
+    "question_id": 77107721,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 0,
+    "body_len": 612,
+    "practices": []
+  },
+  {
+    "answer_id": 77128034,
+    "question_id": 77127947,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 1,
+    "body_len": 985,
+    "practices": [
+      {
+        "practice": "Use useEffect to perform actions after the state variable has been updated, with that state in the dependency array.",
+        "conditions": [],
+        "evidence_type": "both"
+      },
+      {
+        "practice": "Pass a callback function to setState so React provides the previous state as an argument to that function.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 77260886,
+    "question_id": 77260874,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 0,
+    "body_len": 275,
+    "practices": []
+  },
+  {
+    "answer_id": 77503102,
+    "question_id": 77503064,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 0,
+    "body_len": 173,
+    "practices": [
+      {
+        "practice": "Use a callback in the setSelectedData function so the update happens through that callback instead of reading the state immediately.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 77503134,
+    "question_id": 77503064,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 0,
+    "body_len": 382,
+    "practices": []
+  },
+  {
+    "answer_id": 77504121,
+    "question_id": 77503064,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 0,
+    "body_len": 243,
+    "practices": []
+  },
+  {
+    "answer_id": 77504698,
+    "question_id": 77504568,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 0,
+    "body_len": 225,
+    "practices": [
+      {
+        "practice": "Log the state with useEffect or directly inside the JSX to confirm the updated value.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 77504979,
+    "question_id": 77504568,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 0,
+    "body_len": 405,
+    "practices": []
+  },
+  {
+    "answer_id": 77538377,
+    "question_id": 77537893,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 0,
+    "body_len": 506,
+    "practices": [
+      {
+        "practice": "Use the fetched data directly in your JSX instead of reading it back from state inside the axios callback.",
+        "conditions": [],
+        "evidence_type": "prose"
+      },
+      {
+        "practice": "Read the updated state on the next render rather than expecting it immediately after dispatching or setting it.",
+        "conditions": [],
+        "evidence_type": "prose"
+      }
+    ]
+  },
+  {
+    "answer_id": 77571486,
+    "question_id": 77571454,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 0,
+    "body_len": 270,
+    "practices": [
+      {
+        "practice": "Use the response object directly instead of reading the newly set state value immediately after calling the setter.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 77630824,
+    "question_id": 77630358,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 0,
+    "body_len": 364,
+    "practices": [
+      {
+        "practice": "Create the new state separately in a local value if you need the data immediately instead of waiting for the next render.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 77693336,
+    "question_id": 77692564,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 0,
+    "body_len": 126,
+    "practices": []
+  },
+  {
+    "answer_id": 77704920,
+    "question_id": 77704899,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 0,
+    "body_len": 488,
+    "practices": [
+      {
+        "practice": "Use a useEffect to check for the state change and call the validate function when that state changes.",
+        "conditions": [],
+        "evidence_type": "both"
+      },
+      {
+        "practice": "Make the effect look for both the relevant state and the relevant handler/function so it can call the validate function.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 77812965,
+    "question_id": 77812854,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 1,
+    "body_len": 347,
+    "practices": [
+      {
+        "practice": "Create a temporary source of truth from which both state and localStorage obtain their arguments.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 77976736,
+    "question_id": 77976612,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 0,
+    "body_len": 324,
+    "practices": [
+      {
+        "practice": "Do not store feedback as state when it is derived from another state.",
+        "conditions": [],
+        "evidence_type": "prose"
+      }
+    ]
+  },
+  {
+    "answer_id": 78015797,
+    "question_id": 78015251,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 0,
+    "body_len": 277,
+    "practices": [
+      {
+        "practice": "Use a state index to select the right question to display, similar to carousel functionality.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 78073022,
+    "question_id": 78072677,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 0,
+    "body_len": 6,
+    "practices": []
+  },
+  {
+    "answer_id": 78095736,
+    "question_id": 78095702,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 0,
+    "body_len": 271,
+    "practices": []
+  },
+  {
+    "answer_id": 78096304,
+    "question_id": 78095702,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 0,
+    "body_len": 200,
+    "practices": [
+      {
+        "practice": "Watch the state value for changes using useEffect.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 78111454,
+    "question_id": 78110624,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 0,
+    "body_len": 401,
+    "practices": [
+      {
+        "practice": "Do not create state for values that can be computed or derived from the input value; compute them instead.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 78206918,
+    "question_id": 78206817,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 0,
+    "body_len": 157,
+    "practices": []
+  },
+  {
+    "answer_id": 78235707,
+    "question_id": 78235632,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 0,
+    "body_len": 109,
+    "practices": [
+      {
+        "practice": "Move the checkTypaheadMatches function into a useEffect hook.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 78270789,
+    "question_id": 78270769,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 0,
+    "body_len": 227,
+    "practices": []
+  },
+  {
+    "answer_id": 78283223,
+    "question_id": 78283173,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 0,
+    "body_len": 571,
+    "practices": [
+      {
+        "practice": "Move the logic into a separate function and call that function after the state update path instead of expecting the setter to update synchronously.",
+        "conditions": [],
+        "evidence_type": "both"
+      },
+      {
+        "practice": "Validate on any date change so the error message appears as soon as a selection is invalid.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 78508656,
+    "question_id": 78508511,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 0,
+    "body_len": 877,
+    "practices": [
+      {
+        "practice": "Use the new json.nextPageToken directly in the URL construction instead of reading nextToken immediately after calling setNextToken.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 78592770,
+    "question_id": 78592601,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 0,
+    "body_len": 186,
+    "practices": []
+  },
+  {
+    "answer_id": 78592840,
+    "question_id": 78592601,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 0,
+    "body_len": 622,
+    "practices": []
+  },
+  {
+    "answer_id": 78643612,
+    "question_id": 78643437,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 1,
+    "body_len": 517,
+    "practices": [
+      {
+        "practice": "Use the value from the event instead of the state when you need the actual value immediately.",
+        "conditions": [],
+        "evidence_type": "both"
+      },
+      {
+        "practice": "Use the direct state setter rather than the alternative setter mentioned in the question.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 78651590,
+    "question_id": 78651409,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 0,
+    "body_len": 241,
+    "practices": [
+      {
+        "practice": "Check the updated image state in a useEffect after calling setImage.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 78651690,
+    "question_id": 78651409,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 0,
+    "body_len": 260,
+    "practices": [
+      {
+        "practice": "Preserve the existing state when setting it so a field like name does not overwrite the rest of the state.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 78683781,
+    "question_id": 78683400,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 0,
+    "body_len": 487,
+    "practices": [
+      {
+        "practice": "Add the relevant piece of state to the dependency array if you insist on using the hook.",
+        "conditions": [
+          "if you insist on using the hook"
+        ],
+        "evidence_type": "both"
+      },
+      {
+        "practice": "Use a ref hook so you can access the value anywhere.",
+        "conditions": [
+          "if you insist on using the hook"
+        ],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 78699983,
+    "question_id": 78699694,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 1,
+    "body_len": 1178,
+    "practices": [
+      {
+        "practice": "Keep a separate simple JavaScript object for other computation while leaving React state alone for GUI rendering.",
+        "conditions": [],
+        "evidence_type": "both"
+      },
+      {
+        "practice": "Use refs to hold values that need to persist across GUI re-renders.",
+        "conditions": [],
+        "evidence_type": "both"
+      },
+      {
+        "practice": "Use state for values that need to be displayed in the GUI so React can track the changes and re-render when they change.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 78712183,
+    "question_id": 78711891,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 0,
+    "body_len": 658,
+    "practices": [
+      {
+        "practice": "Use a boolean flag to guard against an async race condition so the later state update wins.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 78712259,
+    "question_id": 78711891,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 0,
+    "body_len": 187,
+    "practices": [
+      {
+        "practice": "Use the functional updater form to merge the response data into the previous state object: setInputsData(oldState => ({...oldState, ...response.data})).",
+        "conditions": [],
+        "evidence_type": "prose"
+      }
+    ]
+  },
+  {
+    "answer_id": 78721091,
+    "question_id": 78719638,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 0,
+    "body_len": 240,
+    "practices": []
+  },
+  {
+    "answer_id": 78769319,
+    "question_id": 78768496,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 0,
+    "body_len": 106,
+    "practices": []
+  },
+  {
+    "answer_id": 78790908,
+    "question_id": 78790840,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 0,
+    "body_len": 189,
+    "practices": []
+  },
+  {
+    "answer_id": 78790964,
+    "question_id": 78790840,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 0,
+    "body_len": 262,
+    "practices": [
+      {
+        "practice": "Have another useEffect with game_cards as the dependency so the alert runs every time game_cards changes.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 78805409,
+    "question_id": 78805394,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 0,
+    "body_len": 93,
+    "practices": [
+      {
+        "practice": "Use a hook to watch for changes to the value after the callback updates it.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 78897849,
+    "question_id": 78897777,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 1,
+    "body_len": 353,
+    "practices": [
+      {
+        "practice": "Use the functional updater form to serialize multiple state updates in the handler.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 78941300,
+    "question_id": 78941267,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 0,
+    "body_len": 618,
+    "practices": [
+      {
+        "practice": "Add logging in a useEffect that listens for changes to authUser to verify the state update.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 78962570,
+    "question_id": 78962438,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 0,
+    "body_len": 278,
+    "practices": []
+  },
+  {
+    "answer_id": 78964761,
+    "question_id": 78964726,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 0,
+    "body_len": 125,
+    "practices": [
+      {
+        "practice": "Use a useEffect with the relevant state in its dependency array to run code after the state update has completed.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 78965750,
+    "question_id": 78964726,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 0,
+    "body_len": 38,
+    "practices": []
+  },
+  {
+    "answer_id": 79176129,
+    "question_id": 79175658,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 0,
+    "body_len": 502,
+    "practices": [
+      {
+        "practice": "Use a functional update so the callback always works with the latest snackbar state.",
+        "conditions": [],
+        "evidence_type": "both"
+      },
+      {
+        "practice": "Remove the state value from the useCallback dependency array when the callback uses the functional updater.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 79436357,
+    "question_id": 79435733,
+    "source": "dup",
+    "score": 0,
+    "is_accepted": 0,
+    "body_len": 438,
+    "practices": []
+  },
+  {
+    "answer_id": 75032390,
+    "question_id": 75030746,
+    "source": "dup",
+    "score": -1,
+    "is_accepted": 0,
+    "body_len": 463,
+    "practices": [
+      {
+        "practice": "Use a side effect with useEffect to run the log at the right moment after the state change.",
+        "conditions": [],
+        "evidence_type": "both"
+      },
+      {
+        "practice": "Render the value in the component so you can see the updated state on a later render.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 75244600,
+    "question_id": 75244564,
+    "source": "dup",
+    "score": -1,
+    "is_accepted": 0,
+    "body_len": 197,
+    "practices": []
+  },
+  {
+    "answer_id": 76596848,
+    "question_id": 76596774,
+    "source": "dup",
+    "score": -1,
+    "is_accepted": 0,
+    "body_len": 77,
+    "practices": []
+  },
+  {
+    "answer_id": 76950258,
+    "question_id": 76950232,
+    "source": "dup",
+    "score": -1,
+    "is_accepted": 0,
+    "body_len": 66,
+    "practices": [
+      {
+        "practice": "Use useEffect to do something whenever state changes.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 76950284,
+    "question_id": 76950232,
+    "source": "dup",
+    "score": -1,
+    "is_accepted": 1,
+    "body_len": 680,
+    "practices": [
+      {
+        "practice": "Read the updated state during the next render, when React has re-rendered the component.",
+        "conditions": [],
+        "evidence_type": "both"
+      },
+      {
+        "practice": "Use a useEffect hook if you only need the state when it changes rather than on every render.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 76974033,
+    "question_id": 76973961,
+    "source": "dup",
+    "score": -1,
+    "is_accepted": 0,
+    "body_len": 953,
+    "practices": [
+      {
+        "practice": "Read the updated state on the next render, since the value is assigned in the next render after the fetch finishes.",
+        "conditions": [
+          "during the fetch / after the communication with the server finishes"
+        ],
+        "evidence_type": "both"
+      },
+      {
+        "practice": "Put the logging or other follow-up logic in a useEffect that depends on the state so it runs whenever that state changes.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 77025579,
+    "question_id": 77024992,
+    "source": "dup",
+    "score": -1,
+    "is_accepted": 0,
+    "body_len": 599,
+    "practices": [
+      {
+        "practice": "Use a useEffect to do something after the state has been updated.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 77165168,
+    "question_id": 77165106,
+    "source": "dup",
+    "score": -1,
+    "is_accepted": 0,
+    "body_len": 95,
+    "practices": [
+      {
+        "practice": "Make a deep copy of the updated value before setting state so React gets a new reference.",
+        "conditions": [],
+        "evidence_type": "prose"
+      }
+    ]
+  },
+  {
+    "answer_id": 77261732,
+    "question_id": 77261702,
+    "source": "dup",
+    "score": -1,
+    "is_accepted": 0,
+    "body_len": 234,
+    "practices": [
+      {
+        "practice": "Use the updated state on the next render rather than expecting it to change immediately.",
+        "conditions": [],
+        "evidence_type": "both"
+      },
+      {
+        "practice": "Save the new state into a variable and use that variable in the callback instead of reading state back immediately.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 77362386,
+    "question_id": 77362261,
+    "source": "dup",
+    "score": -1,
+    "is_accepted": 1,
+    "body_len": 43,
+    "practices": []
+  },
+  {
+    "answer_id": 77816335,
+    "question_id": 77814993,
+    "source": "dup",
+    "score": -1,
+    "is_accepted": 0,
+    "body_len": 304,
+    "practices": [
+      {
+        "practice": "Add some delay before calling the getData method.",
+        "conditions": [],
+        "evidence_type": "prose"
+      },
+      {
+        "practice": "Pass the needed values as parameters to the getData() method instead of reading state back later.",
+        "conditions": [],
+        "evidence_type": "prose"
+      }
+    ]
+  },
+  {
+    "answer_id": 78175229,
+    "question_id": 78174664,
+    "source": "dup",
+    "score": -1,
+    "is_accepted": 0,
+    "body_len": 25,
+    "practices": []
+  },
+  {
+    "answer_id": 78175319,
+    "question_id": 78174664,
+    "source": "dup",
+    "score": -1,
+    "is_accepted": 0,
+    "body_len": 49,
+    "practices": []
+  },
+  {
+    "answer_id": 78301907,
+    "question_id": 78301874,
+    "source": "dup",
+    "score": -1,
+    "is_accepted": 1,
+    "body_len": 470,
+    "practices": [
+      {
+        "practice": "Do not keep totalPrice as its own state when it can be directly calculated from the cart; calculate it during rendering instead.",
+        "conditions": [],
+        "evidence_type": "both"
+      },
+      {
+        "practice": "If the calculation is expensive, wrap it in useMemo so it only recalculates when cartItems change.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 78401972,
+    "question_id": 78401748,
+    "source": "dup",
+    "score": -1,
+    "is_accepted": 1,
+    "body_len": 305,
+    "practices": [
+      {
+        "practice": "Use another useEffect if you want to run an operation right after the state change.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 78570306,
+    "question_id": 78570270,
+    "source": "dup",
+    "score": -1,
+    "is_accepted": 0,
+    "body_len": 840,
+    "practices": [
+      {
+        "practice": "Use the spread operator to set an array state from the returned array data instead of dumping it directly into state.",
+        "conditions": [
+          "when the backend returns an array"
+        ],
+        "evidence_type": "both"
+      },
+      {
+        "practice": "Console.log the state after the data is set rather than immediately after calling the setter.",
+        "conditions": [],
+        "evidence_type": "both"
+      },
+      {
+        "practice": "Use callbacks to see the data after it is set.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 78833418,
+    "question_id": 78833250,
+    "source": "dup",
+    "score": -1,
+    "is_accepted": 1,
+    "body_len": 248,
+    "practices": []
+  },
+  {
+    "answer_id": 79234459,
+    "question_id": 79234402,
+    "source": "dup",
+    "score": -1,
+    "is_accepted": 0,
+    "body_len": 570,
+    "practices": [
+      {
+        "practice": "Rely on the component's next render cycle to access the updated state instead of expecting it immediately after calling setState.",
+        "conditions": [],
+        "evidence_type": "prose"
+      }
+    ]
+  },
+  {
+    "answer_id": 79292211,
+    "question_id": 79292073,
+    "source": "dup",
+    "score": -1,
+    "is_accepted": 0,
+    "body_len": 87,
+    "practices": [
+      {
+        "practice": "Use the updater function form of the state setter.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 79584523,
+    "question_id": 79584479,
+    "source": "dup",
+    "score": -1,
+    "is_accepted": 0,
+    "body_len": 189,
+    "practices": [
+      {
+        "practice": "Log the value you are about to set instead of accessing the state variable immediately after calling the setter.",
+        "conditions": [],
+        "evidence_type": "prose"
+      }
+    ]
+  },
+  {
+    "answer_id": 79617200,
+    "question_id": 79616934,
+    "source": "dup",
+    "score": -1,
+    "is_accepted": 0,
+    "body_len": 323,
+    "practices": [
+      {
+        "practice": "Calculate the new index manually and use it directly for both the state update and any other logic that depends on it.",
+        "conditions": [],
+        "evidence_type": "both"
+      }
+    ]
+  },
+  {
+    "answer_id": 75030835,
+    "question_id": 75030746,
+    "source": "dup",
+    "score": -2,
+    "is_accepted": 0,
+    "body_len": 353,
+    "practices": [
+      {
+        "practice": "Use a function with the previous value as its first argument when updating boolean or number state.",
+        "conditions": [],
+        "evidence_type": "prose"
+      }
+    ]
+  }
+]

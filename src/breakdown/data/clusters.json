@@ -1,0 +1,230 @@
+{
+  "n": 163,
+  "clusters": [
+    {
+      "name": "useEffect after state change",
+      "members": [
+        0,
+        4,
+        11,
+        19,
+        21,
+        22,
+        28,
+        31,
+        39,
+        41,
+        42,
+        43,
+        44,
+        45,
+        53,
+        54,
+        57,
+        60,
+        61,
+        63,
+        67,
+        77,
+        85,
+        86,
+        88,
+        91,
+        94,
+        98,
+        101,
+        102,
+        105,
+        110,
+        111,
+        115,
+        117,
+        119,
+        123,
+        125,
+        132,
+        133,
+        135,
+        136,
+        139,
+        141,
+        143,
+        145,
+        146,
+        154
+      ],
+      "agreement": 1.0
+    },
+    {
+      "name": "Use local/event/response value immediately",
+      "members": [
+        5,
+        10,
+        23,
+        29,
+        40,
+        46,
+        52,
+        62,
+        82,
+        83,
+        84,
+        92,
+        93,
+        95,
+        100,
+        106,
+        108,
+        109,
+        112,
+        118,
+        120,
+        121,
+        127,
+        149,
+        151,
+        160,
+        161
+      ],
+      "agreement": 0.9753
+    },
+    {
+      "name": "Functional updater from previous state",
+      "members": [
+        2,
+        8,
+        24,
+        27,
+        47,
+        49,
+        73,
+        74,
+        75,
+        76,
+        99,
+        103,
+        104,
+        131,
+        134,
+        137,
+        138,
+        159,
+        162
+      ],
+      "agreement": 1.0
+    },
+    {
+      "name": "Read updated state on next render",
+      "members": [
+        3,
+        12,
+        35,
+        36,
+        38,
+        48,
+        51,
+        55,
+        72,
+        107,
+        140,
+        142,
+        144,
+        148,
+        158
+      ],
+      "agreement": 0.9556
+    },
+    {
+      "name": "Avoid redundant derived state",
+      "members": [
+        64,
+        68,
+        69,
+        70,
+        71,
+        97,
+        113,
+        116,
+        152,
+        153
+      ],
+      "agreement": 0.9333
+    },
+    {
+      "name": "useRef for mutable latest value",
+      "members": [
+        6,
+        14,
+        34,
+        59,
+        81,
+        90,
+        126,
+        128
+      ],
+      "agreement": 1.0
+    },
+    {
+      "name": "Custom async/callback state helpers",
+      "members": [
+        9,
+        25,
+        26,
+        30,
+        32,
+        33,
+        79,
+        157
+      ],
+      "agreement": 0.8333
+    },
+    {
+      "name": "Direct set vs merge/immutability",
+      "members": [
+        1,
+        50,
+        56,
+        89,
+        122,
+        124
+      ],
+      "agreement": 0.8889
+    },
+    {
+      "name": "Alternative UI/data-flow specifics",
+      "members": [
+        37,
+        65,
+        66,
+        87
+      ],
+      "agreement": 0.7778
+    },
+    {
+      "name": "Reducer/context/custom state architecture",
+      "members": [
+        15,
+        16,
+        17
+      ],
+      "agreement": 1.0
+    },
+    {
+      "name": "Initialize state properly",
+      "members": [
+        18,
+        58
+      ],
+      "agreement": 1.0
+    },
+    {
+      "name": "Direct set vs merge/immutability",
+      "members": [
+        147,
+        155
+      ],
+      "agreement": 0.6667
+    }
+  ],
+  "_note": "k=3 co-association consensus (majority 2/3 of 163 practices); 12 multi-member head clusters; singletons omitted → long-tail"
+}

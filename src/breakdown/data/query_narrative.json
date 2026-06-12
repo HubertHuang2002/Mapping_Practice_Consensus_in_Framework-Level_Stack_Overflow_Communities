@@ -1,0 +1,11 @@
+{
+  "query": "The useState set method is not reflecting a change immediately",
+  "group_size": 70,
+  "shape": "mixed",
+  "dominant_approach": "useEffect after state change",
+  "authority_alignment": "dispersed",
+  "temporal": "insufficient_coverage",
+  "headline": "Many fixes coexist; useEffect leads but doesn’t dominate",
+  "body": "The biggest camp is useEffect after state change at 48 of 163 practices (29%), with perfect within-cluster agreement, but that is far from a majority. The breakdown is broad rather than unanimous: using the local/event/response value immediately (27) and functional updater from previous state (19) are substantial rivals, followed by several smaller clusters and a long tail. Authority is spread across multiple approaches, and the answers are concentrated in 2023-2024, so there is no solid temporal trajectory to read.",
+  "_note": "query/group_size = Module C placeholders; shape/authority/temporal/headline/body = D-4 LLM output"
+}
